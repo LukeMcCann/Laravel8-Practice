@@ -31,9 +31,13 @@
         <h3>{{ $user }}</h3>
     @endforeach
 
+    <!--CSRF should be included whenever a form is defined, this creates a CSRF token for the request to determine the app accessing, 
+        allowing the middleware to prevent malicious external requests-->
+    @csrf
     <script>
         var data = @json($users);
         alert(data);
+        console.log($data);
     </script>
     
 </body>
