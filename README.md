@@ -66,6 +66,23 @@ What this did was to load all of the routes in routes/web.php using the web midd
  having the anmespace applied. This means that when you delcare routes in laravel 8 the 
  string-syntax, Laravel isn't going to look for the controller in the correct folder (App\Http\Controllers).
 
+
+##### Laravel Components
+
+Components
+
+Components are what some refer to as includes.
+These are view files which are split into specific reusable pieces. In Laravel 8
+We can create these through: <code>php artisan make:component ComponentName</code>
+
+This will create a components directory in your resources folder and a blade template
+of the entered name, witha  second file being generated in App\View\Components as ComponentName.php
+
+If we were to make a header component along with a footer component we would use this command to generate
+the two necessary files. The generated PHP file in the view\components folder handles the rendering
+of the components, to use these components we can simply refer to them with a prefix 'x-' in our
+current views: x-header (self-closing tag) (see branch: practice/laravel-component).
+
 ---
 ## Learning Laravel
 

@@ -9,5 +9,7 @@
 <body>
     <header>
         <h1>This is the header</h1>
+
+        <p>Params: {{ $title }}</p>
     </header>
 

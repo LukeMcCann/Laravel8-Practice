@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::view('users', 'user');
+
+Route::view('about', 'about');
