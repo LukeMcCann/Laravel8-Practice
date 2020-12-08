@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::view('/view-only', 'welcome');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/{params}', function ($params) {
+    return view('welcome', ['params' => $params]);
+});
+
+
