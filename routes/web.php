@@ -96,4 +96,5 @@ Route::get('/', function () {
    * 
    *   Note: Remember to import your class at the top: use path\to\controller
    */
-Route::get('/users', [Users::class, 'index']);
+Route::get('/users/{name}', [Users::class, 'index']);
+

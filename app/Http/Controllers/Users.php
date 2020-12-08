@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 final class Users extends Controller 
 {
-    public function index()
+    public function index(string $name)
     {
-        echo "Hello, from " . get_class($this);
+        echo "Hello $name, from " . get_class($this);
     }
 }
