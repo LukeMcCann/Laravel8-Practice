@@ -13,7 +13,6 @@
 
     <x-footer />
 
-
     <p>
         In this file the header and innter part of the content are rendered into
         the view using partials. Partials allow views to be broken down into 
@@ -25,6 +24,17 @@
         of variables are defined and passed to it, in which case it becomes a local scope 
         once again.
     </p>
+
+    <h1>PHP in JS</h1>
+
+    @foreach ($users as $user)
+        <h3>{{ $user }}</h3>
+    @endforeach
+
+    <script>
+        var data = @json($users);
+        alert(data);
+    </script>
     
 </body>
 </html>
