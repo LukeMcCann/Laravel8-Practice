@@ -23,5 +23,12 @@
             <h1>{{ $user }} exists!</h1>
         @endif
     @endforeach
+
+    <br />
+
+    <h1>Users array contains:</h1>
+    @for ($i = 0; $i < count($users); $i++) 
+        <p>{{ $users[$i] }}</p>
+    @endfor
 </body>
 </html>
