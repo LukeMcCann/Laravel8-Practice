@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 final class FormController extends Controller
 {
-    public function getData()
+    public function getData(Request $request)
     {
-        return 'Form data will be here';
+        return $request->input();
     }
 }
