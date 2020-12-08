@@ -19,6 +19,8 @@
     @foreach ($users as $user)
         @if ($user == 'Luke')
             <h1>{{ $user }} exists!</h1>
+        @else 
+            <h1>{{ $user }} exists!</h1>
         @endif
     @endforeach
 </body>
