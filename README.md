@@ -56,6 +56,10 @@ In order to ensure that the Laravel community is welcoming to all, please review
 
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+## Repository
+
+This repository is designed for usage as a practice repo. It contains examples of common Laravel tasks you may wish to perform, from simple routing to websockets. This library will grow over time, to see a specific example, simple check out the branch of interest, each branch will contain only relevant changes to the feature implemented in the branch title. Some branches contain basic projects for getting started in certain Laravel aspects.
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
