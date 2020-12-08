@@ -8,6 +8,6 @@ final class UserController extends Controller
 {
     public function viewRender()
     {
-        return view('users');
+        return view('users', ['users' => ['Luke', 'Darryl', 'Robert', 'James']]);
     }
 }
