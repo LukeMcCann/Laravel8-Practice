@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 
 final class FormController extends Controller
 {
-    public function getData(Request $request)
+    public function getData(LoginRequest $request)
     {
-        // Should be in a Request object really
-        $request->validate([
-            'username' => 'required',
-            'password' => 'required'
-        ]);
         return $request->input();
     }
 }
