@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+p<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -30,6 +30,41 @@ You will likely notice in more recent versions of Laravel you have two routing f
 Either file can be used for routing, the difference lies within the purpose. All routes defined in api.php will be prefixed with <code>'/api'</code>, this will use the auth and api middleware checking for an access token, creating some additional security by throttlinf API requests. 
 
 Both files function the same, other than this prefix and middleware being applied. Use api.php when youu wish to send a statless request, or as the name suggests for the api. The web.php is for people accessing your application from the browser, whilst the api.php are the routes for those who just need the data from the app as key value pairs (or Json etc...).
+
+#### Laravel 8 Syntax Changes
+
+##### Route/Controller Syntax
+
+As of Laravel 8 the default namespacing for routes has been removed.
+the previous method relies on this default namespacing to resolve the path
+from routes in web.php,
+ 
+Up until Laravel 7 the RouteServiceProvider created this namespace as such:
+<code>
+<pre>
+               protected $namespace = 'App\Http\Controllers';
+   
+               Route::middleware('web')
+                     ->namespace($this->namespace)
+                     ->group(base_path('routes/web.php));
+</pre>
+</code>
+What this did was to load all of the routes in routes/web.php using the web middleware within the App\Http\Controllers namespace. This, in turn, meant whenever you declared a route using the string-syntax, Laravel would look for that controller in the App\Http\Controllers folder:
+ 
+ In Laravel 8 the $namespace variable was removed and the route declaration changed to:
+
+<code>
+<pre>      
+              Route::middleware('web')
+                   ->group(base_path('routes/web.php'));
+</pre>
+</code>
+
+ While Laravel is still looking for routes in web.php and using the middleware it is no longer
+ having the anmespace applied. This means that when you delcare routes in laravel 8 the 
+ string-syntax, Laravel isn't going to look for the controller in the correct folder (App\Http\Controllers).
+
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
