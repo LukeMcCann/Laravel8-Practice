@@ -30,6 +30,8 @@ You will likely notice in more recent versions of Laravel you have two routing f
 Either file can be used for routing, the difference lies within the purpose. All routes defined in api.php will be prefixed with <code>'/api'</code>, this will use the auth and api middleware checking for an access token, creating some additional security by throttlinf API requests. 
 
 Both files function the same, other than this prefix and middleware being applied. Use api.php when youu wish to send a statless request, or as the name suggests for the api. The web.php is for people accessing your application from the browser, whilst the api.php are the routes for those who just need the data from the app as key value pairs (or Json etc...).
+
+In other words, api.php is intended for use in building [RESTful](https://g.co/kgs/LZeaFM) APis.
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
