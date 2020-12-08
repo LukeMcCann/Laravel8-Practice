@@ -8,6 +8,6 @@ final class FormController extends Controller
 {
     public function getData()
     {
-        return view('form');
+        return 'Form data will be here';
     }
 }
