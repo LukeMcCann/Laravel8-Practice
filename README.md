@@ -23,6 +23,8 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ---
 # Changes in Laravel 8
+
+You should read the upgrade documentation before moving from Laravel 7 to Laravel 8: [Click here](https://laravel.com/docs/8.x/upgrade).
 ### Routing
 
 #### Web vs Api
@@ -32,8 +34,6 @@ You will likely notice in more recent versions of Laravel you have two routing f
 Either file can be used for routing, the difference lies within the purpose. All routes defined in api.php will be prefixed with <code>'/api'</code>, this will use the auth and api middleware checking for an access token, creating some additional security by throttlinf API requests. 
 
 Both files function the same, other than this prefix and middleware being applied. Use api.php when youu wish to send a statless request, or as the name suggests for the api. The web.php is for people accessing your application from the browser, whilst the api.php are the routes for those who just need the data from the app as key value pairs (or Json etc...).
-
-#### Laravel 8 Syntax Changes
 
 ##### Route/Controller Syntax
 
