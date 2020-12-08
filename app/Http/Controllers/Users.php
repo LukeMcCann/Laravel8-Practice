@@ -12,9 +12,10 @@ final class Users extends Controller
 
         // API Example: Note you would usually return a  new JsonResponse for an API
 
-        return  ['Users' => [
-                    'name' => $name
-                ]
-            ];
+        return  [
+                    'Users' => [
+                        'name' => $name
+                    ]
+                ];
     }
 }
