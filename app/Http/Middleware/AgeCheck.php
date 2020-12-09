@@ -16,7 +16,13 @@ class AgeCheck
      */
     public function handle(Request $request, Closure $next)
     {
-        echo '<h1>Hello from ' . \get_class($this);
+        // Uncomment the echo to see where the middleware is applied
+        // add a query string ?age= with varying values to see middleware in action
+        
+        // echo '<h1>Hello from ' . \get_class($this);
+        if ($request->age && $request->age < 18) {
+            return \redirect('noaccess');
+        }
         return $next($request);
     }
 }
