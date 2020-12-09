@@ -66,6 +66,24 @@ What this did was to load all of the routes in routes/web.php using the web midd
  having the anmespace applied. This means that when you delcare routes in laravel 8 the 
  string-syntax, Laravel isn't going to look for the controller in the correct folder (App\Http\Controllers).
 
+ ##### Middleware
+
+ ##### Global Middleware
+
+Global middleware is applied to every route in the application. You can test this by
+creating some middleware: <code> php artisan make:middleware MiddlewareName </code>
+then echoing out a hello statement in the handle method of the middleware.
+
+##### Route Middleware
+
+Route middleware is applied to a single route at a time, this can be contorller via
+permissions.
+##### Group Middleware
+
+Group middleware is applied to a defined Group (or otherwise known as a collection of routes).
+This allows for fine control over collections of Routes and can also be addressed with permissions.
+#####
+
 ---
 ## Learning Laravel
 
