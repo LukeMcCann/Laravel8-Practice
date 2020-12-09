@@ -9,6 +9,8 @@ final class UserController extends Controller
 {
     public function callExternalApi()
     {
-        return Http::get('https://reqres.in/api/users?page=1');
+        $users = Http::get('https://reqres.in/api/users?page=1');
+
+        return view('users', [ 'users' => $users['data']]);
     }
 }
