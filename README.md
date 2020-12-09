@@ -82,7 +82,10 @@ permissions.
 
 Group middleware is applied to a defined Group (or otherwise known as a collection of routes).
 This allows for fine control over collections of Routes and can also be addressed with permissions.
-#####
+##### Http Client
+
+Http Client is exactly what it says, Laravel's Http Client. 
+Laravel uses Guzzle Http to make requests, the Http object can be used to make calls to external APIs, this may be useful for calling APIs from other projects, or possibly separating FE/BE functionality into an APP and API.
 
 ---
 ## Learning Laravel
