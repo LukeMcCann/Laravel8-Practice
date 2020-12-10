@@ -87,6 +87,27 @@ This allows for fine control over collections of Routes and can also be addresse
 Http Client is exactly what it says, Laravel's Http Client. 
 Laravel uses Guzzle Http to make requests, the Http object can be used to make calls to external APIs, this may be useful for calling APIs from other projects, or possibly separating FE/BE functionality into an APP and API.
 
+###### Http Request Methods
+
+###### GET
+
+This is the standard request for retrieving non-sensitive data. 
+
+###### POST
+
+This is for posting data in a secure manner, used for writing whole objects to the database, used for creating a resource.
+
+###### PATCH
+
+Similar to post, usually used for patching one or two fields within the database, used for updating a resource.
+
+###### PUT
+
+Similar to patch bu uses a request URI to supply a modified version of the requested resource which replaces the original version of the resource, whilst patch supplies a set of instructions to modify the resource.
+
+###### OPTIONS
+
+requests permitted communication options for a given URL or server.
 ---
 ## Learning Laravel
 
