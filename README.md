@@ -91,23 +91,39 @@ Laravel uses Guzzle Http to make requests, the Http object can be used to make c
 
 ###### GET
 
-This is the standard request for retrieving non-sensitive data. 
+The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+
+###### HEAD
+
+The HEAD method asks for a response identical to that of a GET request, but without the response body.
 
 ###### POST
 
-This is for posting data in a secure manner, used for writing whole objects to the database, used for creating a resource.
+The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server. Always creates a new resource.
 
 ###### PATCH
 
-Similar to post, usually used for patching one or two fields within the database, used for updating a resource.
+The PATCH method is used to apply partial modifications to a resource.
 
 ###### PUT
 
-Similar to patch bu uses a request URI to supply a modified version of the requested resource which replaces the original version of the resource, whilst patch supplies a set of instructions to modify the resource.
+The PUT method replaces all current representations of the target resource with the request payload. Should be used to update resources.
+
+###### DELETE
+
+The DELETE method deletes the specified resource.
+
+###### CONNECT
+
+The CONNECT method establishes a tunnel to the server identified by the target resource.
 
 ###### OPTIONS
 
-requests permitted communication options for a given URL or server.
+The OPTIONS method is used to describe the communication options for the target resource.
+
+###### TRACE
+
+The TRACE method performs a message loop-back test along the path to the target resource.
 ---
 ## Learning Laravel
 
