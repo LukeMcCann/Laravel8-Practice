@@ -124,6 +124,13 @@ The OPTIONS method is used to describe the communication options for the target 
 ###### TRACE
 
 The TRACE method performs a message loop-back test along the path to the target resource.
+
+##### Laravel HTTP Spoofing
+
+Psing PUT and DELTE requires the method_field to be specified in blade forms.
+This will generate a hidden input field containing a spoofed value of 
+the forms HTTP verb.
+
 ---
 ## Learning Laravel
 
